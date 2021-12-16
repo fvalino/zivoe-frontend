@@ -18,7 +18,7 @@ function Announcement() {
       {newNetworkVisible ? (
         <Paper className="new-network">
           <Box className="new-network-box" style={{ marginRight: "10px" }}>
-            <Pill message="Info" style={{ color: "#F8CC82" }} />
+            <Pill message="Info" style={{ color: "#00ffc0" }} />
           </Box>
           <Box className="new-network-box">
             <span>

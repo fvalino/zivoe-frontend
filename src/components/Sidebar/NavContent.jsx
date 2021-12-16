@@ -58,12 +58,12 @@ function NavContent() {
       <Box className="dapp-sidebar-inner" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="https://olympusdao.finance" target="_blank">
+            <Link href="https://zivoe.finance/" target="_blank">
               <SvgIcon
                 color="primary"
                 component={OlympusIcon}
-                viewBox="0 0 151 100"
-                style={{ minWdth: "151px", minHeight: "98px", width: "151px" }}
+                viewBox="0 0 506.9 203.86"
+                style={{ minWdth: "251px", minHeight: "150px", width: "200px" }}
               />
             </Link>
 
@@ -110,7 +110,7 @@ function NavContent() {
                     </Typography>
                   </Link>
 
-                  <Link
+                  {/* <Link
                     component={NavLink}
                     id="wrap-nav"
                     to="/wrap"
@@ -121,13 +121,13 @@ function NavContent() {
                   >
                     <Box display="flex" alignItems="center">
                       <SvgIcon component={WrapIcon} color="primary" viewBox="1 0 20 22" />
-                      {/* <WrapIcon /> */}
+                      <WrapIcon />
                       <Typography variant="h6">Wrap</Typography>
-                      {/* <SvgIcon component={WrapIcon} viewBox="21 -2 20 20" style={{ width: "80px" }} /> */}
+                      <SvgIcon component={WrapIcon} viewBox="21 -2 20 20" style={{ width: "80px" }} />
                     </Box>
-                  </Link>
+                  </Link> */}
 
-                  <Link
+                  {/* <Link
                     href={"https://synapseprotocol.com/?inputCurrency=gOHM&outputCurrency=gOHM&outputChain=43114"}
                     target="_blank"
                   >
@@ -136,7 +136,7 @@ function NavContent() {
                       <Trans>Bridge</Trans>
                       <SvgIcon style={{ marginLeft: "5px" }} component={ArrowUpIcon} />
                     </Typography>
-                  </Link>
+                  </Link> */}
 
                   <Link
                     component={NavLink}
@@ -188,7 +188,7 @@ function NavContent() {
                       })}
                     </div>
                   </div>
-                  <Box className="menu-divider">
+                  {/* <Box className="menu-divider">
                     <Divider />
                   </Box>
                   <Link
@@ -205,7 +205,7 @@ function NavContent() {
                       <Typography variant="h6">OlyZaps</Typography>
                       <SvgIcon component={NewIcon} viewBox="21 -2 20 20" style={{ width: "80px" }} />
                     </Box>
-                  </Link>
+                  </Link> */}
 
                   {/* <Link
                     component={NavLink}
