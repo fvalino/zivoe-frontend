@@ -1,9 +1,9 @@
-name: Production Build
+name: Staging (PR) Build
 #
-# Only runs on merge/push to zve-master
+# Only runs on opened PR to zve-master
 #
 on:
-  push:
+  pull_request:
     branches: [ zve-master ]
   workflow_dispatch:
 jobs:
@@ -30,7 +30,7 @@ jobs:
         with:
           args: --delete
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET_NAME }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_STAGING_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
