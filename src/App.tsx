@@ -77,6 +77,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+console.log("Here is the beginning of the App()");
+console.log("process.env.NODE_ENV: ", process.env.NODE_ENV);
+
 function App() {
   useSegmentAnalytics();
   useGoogleAnalytics();
@@ -95,6 +98,7 @@ function App() {
 
   const [walletChecked, setWalletChecked] = useState(false);
   const networkId = useAppSelector(state => state.network.networkId);
+  console.log("networkID: ", networkId);
 
   // TODO (appleseed-expiredBonds): there may be a smarter way to refactor this
   const { bonds, expiredBonds } = useBonds(networkId);

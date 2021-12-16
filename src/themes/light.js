@@ -11,17 +11,17 @@ const lightTheme = {
   backgroundColor: "#AFCDE9",
   // background:
   // "radial-gradient(circle at 25% 0%, rgba(227,255,240,.5), rgba(227,255,240,0) 50%), radial-gradient(circle at 80% 80%, rgba(131,165,203,.5), rgba(131,165,203,0) 50%)",
-  background: "linear-gradient(180deg, #AFCDE9 1%, #F7FBE7 100%)",
-  paperBg: "rgba(255, 255, 255, 0.6)",
-  modalBg: "#FAFAFAEF",
+  background: "linear-gradient(180deg, #FFF 6%, #00ffc0 80%)",
+  paperBg: "rgba(47, 54, 66, 20%)",
+  modalBg: "#2F3642",
   popoverBg: "rgba(255, 255, 255, 0.95)",
   menuBg: handleBackdropFilter("rgba(255, 255, 255, 0.5)"),
   backdropBg: "rgba(200, 200, 200, 0.4)",
   largeTextColor: "#759AAE",
-  activeLinkColor: "#222222",
+  activeLinkColor: "#2F3642",
   activeLinkSvgColor: "invert(64%) sepia(11%) saturate(934%) hue-rotate(157deg) brightness(90%) contrast(86%)",
   // primaryButtonBG: "#759AAE",
-  primaryButtonBG: "#93AEBC",
+  primaryButtonBG: "#00ffc0",
   primaryButtonHoverBG: "#759AAE",
   // these need fixing
   primaryButtonHoverColor: "#333333",
@@ -209,7 +209,7 @@ export const light = responsiveFontSizes(
         },
         MuiButton: {
           containedPrimary: {
-            color: "#FCFCFC",
+            color: "#252b36",
             backgroundColor: lightTheme.primaryButtonBG,
             "&:hover": {
               backgroundColor: lightTheme.primaryButtonHoverBG,
