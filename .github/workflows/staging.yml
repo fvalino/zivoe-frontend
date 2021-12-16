@@ -22,7 +22,7 @@ jobs:
       - name: Yarn Install
         run: |
           yarn install
-      - name: Production Build
+      - name: Staging Build
         run: |
           yarn build
       - name: Deploy to S3
@@ -30,6 +30,7 @@ jobs:
         with:
           args: --delete
         env:
+          NODE_ENV: development
           AWS_S3_BUCKET: ${{ secrets.AWS_STAGING_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
