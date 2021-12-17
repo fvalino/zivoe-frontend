@@ -79,7 +79,7 @@ export default function ExternalStakePool() {
                       <Button
                         variant="outlined"
                         color="secondary"
-                        href="https://traderjoexyz.com/#/pool/0x321e7092a180bb43555132ec53aaa65a5bf84251/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+                        href="https://traderjoexyz.com/#/pool/0x0000000000000000000000000000000000000000/0x0000000000000000000000000000000000000000"
                         target="_blank"
                         className="stake-lp-button"
                       >
@@ -106,7 +106,7 @@ export default function ExternalStakePool() {
                 <Button
                   variant="outlined"
                   color="secondary"
-                  href="https://traderjoexyz.com/#/pool/0x321e7092a180bb43555132ec53aaa65a5bf84251/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+                  href="https://traderjoexyz.com/#/pool/0x0000000000000000000000000000000000000000/0x0000000000000000000000000000000000000000"
                   target="_blank"
                   className="stake-lp-button"
                   fullWidth

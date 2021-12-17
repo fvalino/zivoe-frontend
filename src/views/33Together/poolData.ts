@@ -41,7 +41,7 @@ export const poolDataQuery = (address: string) => {
 
 export const poolTimeQuery = `
 query {
-  prizeStrategy(id: "0xeeb552c4d5e155e50ee3f7402ed379bf72e36f23") {
+  prizeStrategy(id: "0x0000000000000000000000000000000000000000") {
     multipleWinners {
       numberOfWinners
       prizePeriodSeconds
