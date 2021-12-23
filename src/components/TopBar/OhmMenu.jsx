@@ -95,7 +95,7 @@ function OhmMenu() {
     >
       <Button id="ohm-menu-button" size="large" variant="contained" color="secondary" title="OHM" aria-describedby={id}>
         <SvgIcon component={InfoIcon} color="primary" />
-        <Typography className="ohm-menu-button-text">OHM</Typography>
+        <Typography className="ohm-menu-button-text">ZVE</Typography>
       </Button>
 
       <Popper id={id} open={open} anchorEl={anchorEl} placement="bottom-start" transition>
@@ -132,7 +132,7 @@ function OhmMenu() {
 
                   <Link component={NavLink} to="/wrap" style={{ textDecoration: "none" }}>
                     <Button size="large" variant="contained" color="secondary" fullWidth>
-                      <Typography align="left">Wrap sOHM</Typography>
+                      <Typography align="left">Wrap sZVE</Typography>
                     </Button>
                   </Link>
                 </Box>
@@ -166,7 +166,7 @@ function OhmMenu() {
                             viewBox="0 0 32 32"
                             style={{ height: "25px", width: "25px" }}
                           />
-                          <Typography variant="body1">OHM</Typography>
+                          <Typography variant="body1">ZVE</Typography>
                         </Button>
                       )}
                       {SOHM_ADDRESS && (
@@ -180,7 +180,7 @@ function OhmMenu() {
                             viewBox="0 0 100 100"
                             style={{ height: "25px", width: "25px" }}
                           />
-                          <Typography variant="body1">sOHM</Typography>
+                          <Typography variant="body1">sZVE</Typography>
                         </Button>
                       )}
                       {GOHM_ADDRESS && (
@@ -194,7 +194,7 @@ function OhmMenu() {
                             viewBox="0 0 180 180"
                             style={{ height: "25px", width: "25px" }}
                           />
-                          <Typography variant="body1">gOHM</Typography>
+                          <Typography variant="body1">gZVE</Typography>
                         </Button>
                       )}
                       {PT_TOKEN_ADDRESS && (
