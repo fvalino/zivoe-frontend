@@ -26,7 +26,7 @@ export const OHMPrice = () => {
   return (
     <Metric
       className="metric price"
-      label={t`OHM Price`}
+      label={t`ZVE Price`}
       metric={marketPrice && formatCurrency(marketPrice, 2)}
       isLoading={marketPrice ? false : true}
       {...sharedProps}
@@ -54,7 +54,7 @@ export const BackingPerOHM = () => {
   return (
     <Metric
       className="metric bpo"
-      label={t`Backing per OHM`}
+      label={t`Backing per ZVE`}
       metric={!isNaN(backingPerOhm) && formatCurrency(backingPerOhm, 2)}
       isLoading={backingPerOhm ? false : true}
       {...sharedProps}
@@ -71,7 +71,7 @@ export const CurrentIndex = () => {
       metric={currentIndex && trim(currentIndex, 2) + " sOHM"}
       isLoading={currentIndex ? false : true}
       {...sharedProps}
-      tooltip="The current index tracks the amount of sOHM accumulated since the beginning of staking. Basically, how much sOHM one would have if they staked and held a single OHM from day 1."
+      tooltip="The current index tracks the amount of sZVE accumulated since the beginning of staking. Basically, how much sZVE one would have if they staked and held a single ZVE from day 1."
     />
   );
 };
@@ -81,11 +81,11 @@ export const WSOHMPrice = () => {
   return (
     <Metric
       className="metric wsoprice"
-      label={t`wsOHM Price`}
+      label={t`wsZVE Price`}
       metric={wsOhmPrice && formatCurrency(wsOhmPrice, 2)}
       isLoading={wsOhmPrice ? false : true}
       {...sharedProps}
-      tooltip={`wsOHM = sOHM * index\n\nThe price of wsOHM is equal to the price of OHM multiplied by the current index`}
+      tooltip={`wsZVE = sZVE * index\n\nThe price of wsZVE is equal to the price of ZVE multiplied by the current index`}
     />
   );
 };

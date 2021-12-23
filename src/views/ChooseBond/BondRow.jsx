@@ -8,15 +8,21 @@ import { t, Trans } from "@lingui/macro";
 import { Skeleton } from "@material-ui/lab";
 import useBonds from "src/hooks/Bonds";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 export function BondDataCard({ bond }) {
   const networkId = useSelector(state => state.network.networkId);
+  console.log(useState);
   const { loading } = useBonds(networkId);
   const isBondLoading = !bond.bondPrice ?? true;
+
+  console.log("network on Bondrows", networkId);
 
   return (
     <Slide direction="up" in={true}>
       <Paper id={`${bond.name}--bond`} className="bond-data-card ohm-card">
+        {console.log(bond.name)}
+
         <div className="bond-pair">
           <BondLogo bond={bond} />
           <div className="bond-name">
