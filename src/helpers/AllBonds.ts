@@ -50,7 +50,7 @@ export const dai = new StableBond({
     [NetworkID.AvalancheTestnet]: false,
   },
   isLOLable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -59,7 +59,7 @@ export const dai = new StableBond({
   },
   LOLmessage: "Sold Out",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -94,7 +94,7 @@ export const frax = new StableBond({
     [NetworkID.AvalancheTestnet]: false,
   },
   isLOLable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -103,7 +103,7 @@ export const frax = new StableBond({
   },
   LOLmessage: "Gone Fishin'",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -131,7 +131,7 @@ export const lusd = new StableBond({
   bondContractABI: LusdBondContract,
   isBondable: {
     [NetworkID.Mainnet]: false,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -147,8 +147,8 @@ export const lusd = new StableBond({
   },
   LOLmessage: "",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -185,7 +185,7 @@ export const eth = new CustomBond({
     [NetworkID.AvalancheTestnet]: false,
   },
   isLOLable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -194,7 +194,7 @@ export const eth = new CustomBond({
   },
   LOLmessage: "Taking a Spa Day",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -250,8 +250,8 @@ export const cvx = new CustomBond({
   },
   LOLmessage: "",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -306,8 +306,8 @@ export const cvx_expired = new CustomBond({
   },
   LOLmessage: "",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -343,7 +343,7 @@ export const ohm_dai = new LPBond({
   reserveContract: ReserveOhmDaiContract,
   isBondable: {
     [NetworkID.Mainnet]: false,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -359,8 +359,8 @@ export const ohm_dai = new LPBond({
   },
   LOLmessage: "",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -390,14 +390,14 @@ export const ohm_frax = new LPBond({
   reserveContract: ReserveOhmFraxContract,
   isBondable: {
     [NetworkID.Mainnet]: false,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
     [NetworkID.AvalancheTestnet]: false,
   },
   isLOLable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -406,8 +406,8 @@ export const ohm_frax = new LPBond({
   },
   LOLmessage: "Out of Office",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -453,8 +453,8 @@ export const ohm_lusd = new LPBond({
   },
   LOLmessage: "",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -485,14 +485,14 @@ export const ohm_weth = new CustomBond({
   reserveContract: ReserveOhmEthContract,
   isBondable: {
     [NetworkID.Mainnet]: false,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
     [NetworkID.AvalancheTestnet]: false,
   },
   isLOLable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -501,8 +501,8 @@ export const ohm_weth = new CustomBond({
   },
   LOLmessage: "Maternity Leave",
   isClaimable: {
-    [NetworkID.Mainnet]: true,
-    [NetworkID.Testnet]: true,
+    [NetworkID.Mainnet]: false,
+    [NetworkID.Testnet]: false,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
     [NetworkID.Avalanche]: false,
@@ -555,7 +555,8 @@ export const ohm_weth = new CustomBond({
 // Is it a stableCoin bond? use `new StableBond`
 // Is it an LP Bond? use `new LPBond`
 // Add new bonds to this array!!
-export const allBonds = [dai, frax, eth, cvx, ohm_dai, ohm_frax, lusd, ohm_lusd, ohm_weth];
+// export const allBonds = [dai, frax, eth, cvx, ohm_dai, ohm_frax, lusd, ohm_lusd, ohm_weth];
+export const allBonds = [dai, frax];
 // TODO (appleseed-expiredBonds): there may be a smarter way to refactor this
 export const allExpiredBonds = [cvx_expired];
 export const allBondsMap = allBonds.reduce((prevVal, bond) => {
