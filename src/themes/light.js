@@ -281,9 +281,9 @@ export const light = responsiveFontSizes(
             "&:hover": {
               color: lightTheme.textHighlightColor,
             },
-          },
-          "&.grid-button-text": {
-            color: "#FFFFFF",
+            "&.grid-button-text": {
+              color: "#FFFFFF",
+            },
           },
         },
         MuiTypography: {

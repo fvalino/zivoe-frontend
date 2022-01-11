@@ -271,9 +271,9 @@ export const dark = responsiveFontSizes(
             "&:hover": {
               color: darkTheme.textHighlightColor,
             },
-          },
-          "&.grid-button-text": {
-            color: "#FFFFFF",
+            "&.grid-button-text": {
+              color: "#FFFFFF",
+            },
           },
         },
         MuiTypography: {
