@@ -40,15 +40,15 @@ export const getBalances = createAsyncThunk(
     let fiatDaowsohmBalance = BigNumber.from("0");
     try {
       const gOhmContract = GOHM__factory.connect(addresses[networkID].GOHM_ADDRESS, provider);
-      gOhmBalance = await gOhmContract.balanceOf(address);
+      // gOhmBalance = await gOhmContract.balanceOf(address);
     } catch (e) {
       handleContractError(e);
     }
     try {
       const wsohmContract = new ethers.Contract(addresses[networkID].WSOHM_ADDRESS as string, wsOHM, provider) as WsOHM;
-      wsohmBalance = await wsohmContract.balanceOf(address);
+      // wsohmBalance = await wsohmContract.balanceOf(address);
       // NOTE (appleseed): wsohmAsSohm is wsOHM given as a quantity of sOHM
-      wsohmAsSohm = await wsohmContract.wOHMTosOHM(wsohmBalance);
+      // wsohmAsSohm = await wsohmContract.wOHMTosOHM(wsohmBalance);
     } catch (e) {
       handleContractError(e);
     }
@@ -78,7 +78,7 @@ export const getBalances = createAsyncThunk(
         ierc20Abi,
         provider,
       ) as IERC20;
-      poolBalance = await poolTokenContract.balanceOf(address);
+      // poolBalance = await poolTokenContract.balanceOf(address);
     } catch (e) {
       handleContractError(e);
     }
@@ -146,7 +146,7 @@ export const getMigrationAllowances = createAsyncThunk(
     let wsOhmAllowance = BigNumber.from(0);
     let gOhmAllowance = BigNumber.from(0);
 
-    if (addresses[networkID].OHM_ADDRESS) {
+    if (addresses[networkID].OHM_ADDRESS != "0x0000000000000000000000000000000000000000") {
       try {
         const ohmContract = IERC20__factory.connect(addresses[networkID].OHM_ADDRESS, provider);
         ohmAllowance = await ohmContract.allowance(address, addresses[networkID].MIGRATOR_ADDRESS);
@@ -155,7 +155,7 @@ export const getMigrationAllowances = createAsyncThunk(
       }
     }
 
-    if (addresses[networkID].SOHM_ADDRESS) {
+    if (addresses[networkID].SOHM_ADDRESS != "0x0000000000000000000000000000000000000000") {
       try {
         const sOhmContract = IERC20__factory.connect(addresses[networkID].SOHM_ADDRESS, provider);
         sOhmAllowance = await sOhmContract.allowance(address, addresses[networkID].MIGRATOR_ADDRESS);
@@ -164,7 +164,8 @@ export const getMigrationAllowances = createAsyncThunk(
       }
     }
 
-    if (addresses[networkID].WSOHM_ADDRESS) {
+    if (addresses[networkID].WSOHM_ADDRESS != "0x0000000000000000000000000000000000000000") {
+      console.log("addresses[networkID].WSOHM_ADDRESS: ", addresses[networkID].WSOHM_ADDRESS);
       try {
         const wsOhmContract = IERC20__factory.connect(addresses[networkID].WSOHM_ADDRESS, provider);
         wsOhmAllowance = await wsOhmContract.allowance(address, addresses[networkID].MIGRATOR_ADDRESS);
@@ -173,7 +174,7 @@ export const getMigrationAllowances = createAsyncThunk(
       }
     }
 
-    if (addresses[networkID].GOHM_ADDRESS) {
+    if (addresses[networkID].GOHM_ADDRESS != "0x0000000000000000000000000000000000000000") {
       try {
         const gOhmContract = IERC20__factory.connect(addresses[networkID].GOHM_ADDRESS, provider);
         gOhmAllowance = await gOhmContract.allowance(address, addresses[networkID].MIGRATOR_ADDRESS);
@@ -201,11 +202,11 @@ export const loadAccountDetails = createAsyncThunk(
     let unstakeAllowance = BigNumber.from("0");
     let wrapAllowance = BigNumber.from("0");
     let unwrapAllowance = BigNumber.from("0");
-    let gOhmUnwrapAllowance = BigNumber.from("0");
+    // let gOhmUnwrapAllowance = BigNumber.from("0");
     let poolAllowance = BigNumber.from("0");
     try {
       const gOhmContract = GOHM__factory.connect(addresses[networkID].GOHM_ADDRESS, provider);
-      gOhmUnwrapAllowance = await gOhmContract.allowance(address, addresses[networkID].MIGRATOR_ADDRESS);
+      // gOhmUnwrapAllowance = await gOhmContract.allowance(address, addresses[networkID].MIGRATOR_ADDRESS);
 
       const ohmContract = new ethers.Contract(
         addresses[networkID].OHM_ADDRESS as string,
@@ -220,7 +221,7 @@ export const loadAccountDetails = createAsyncThunk(
       wrapAllowance = await sohmContract.allowance(address, addresses[networkID].WSOHM_ADDRESS);
 
       const wsohmContract = new ethers.Contract(addresses[networkID].WSOHM_ADDRESS as string, wsOHM, provider) as WsOHM;
-      unwrapAllowance = await wsohmContract.allowance(address, addresses[networkID].WSOHM_ADDRESS);
+      // unwrapAllowance = await wsohmContract.allowance(address, addresses[networkID].WSOHM_ADDRESS);
     } catch (e) {
       console.warn("failed contract calls in slice", e);
     }
@@ -234,7 +235,7 @@ export const loadAccountDetails = createAsyncThunk(
       wrapping: {
         ohmWrap: Number(ethers.utils.formatUnits(wrapAllowance, "gwei")),
         ohmUnwrap: Number(ethers.utils.formatUnits(unwrapAllowance, "gwei")),
-        gOhmUnwrap: Number(ethers.utils.formatUnits(gOhmUnwrapAllowance, "ether")),
+        // gOhmUnwrap: Number(ethers.utils.formatUnits(gOhmUnwrapAllowance, "ether")),
       },
     };
   },
