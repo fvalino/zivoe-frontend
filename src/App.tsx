@@ -153,7 +153,7 @@ function App() {
           dispatch(calculateUserBondDetails({ address, bond, provider: loadProvider, networkID: networkId }));
         }
       });
-      dispatch(getZapTokenBalances({ address, networkID: networkId, provider: loadProvider }));
+      // dispatch(getZapTokenBalances({ address, networkID: networkId, provider: loadProvider }));
       expiredBonds.map(bond => {
         if (bond.getClaimability(networkId)) {
           dispatch(calculateUserBondDetails({ address, bond, provider: loadProvider, networkID: networkId }));
