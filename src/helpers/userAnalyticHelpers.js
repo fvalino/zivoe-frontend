@@ -9,6 +9,6 @@ export function segmentUA(data) {
   try {
     analytics.track(data.type, data, { context: { ip: "0.0.0.0" } });
   } catch (e) {
-    console.log("segmentAnalytics", e);
+    console.log("userAnalyticsHelper.segmentUA() is not working property; probably want to fix GTM first");
   }
 }
